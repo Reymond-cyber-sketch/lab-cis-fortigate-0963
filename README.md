@@ -2,7 +2,7 @@
 
 # Auditoría CIS y hardening automatizado de FortiGate
 
-**Autor:** Ken Luis Mateo López · **Matrícula:** 2024-0963 · **ITLA**  
+**Autor:** Reymond Guerrero Cruz · **Matrícula:** 2024-0963 · **ITLA**  
 **Entorno:** GNS3, FortiGate-VM64-KVM 7.4.12 y PowerShell de Windows.  
 **Ejecuciones documentadas:** 12 de noviembre de 2026.
 
