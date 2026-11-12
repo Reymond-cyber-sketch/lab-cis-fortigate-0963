@@ -1,0 +1,14 @@
+﻿Equipo: FGT-USER
+Fecha: 2026-11-12T15:43:40.6980605-04:00
+Modo: Auditar
+Estado: AUDITORIA COMPLETADA
+Error: 
+
+Fase    CIS   Resultado Observado                      
+----    ---   --------- ---------                      
+Inicial 1.3   NO CUMPLE ping https                     
+Inicial 2.2.2 NO CUMPLE Intentos=3; bloqueo=60 segundos
+Inicial 2.4.4 CUMPLE    5 minutos                      
+
+
+

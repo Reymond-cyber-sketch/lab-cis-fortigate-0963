@@ -1,0 +1,25 @@
+digraph Topologia {
+  graph [rankdir=TB,bgcolor="white",pad="0.35",nodesep="0.4",ranksep="0.65",fontname="DejaVu Sans",label="Auditoria y hardening CIS · Infraestructura reutilizada",labelloc=t,fontsize=23];
+  node [shape=box,style="rounded,filled",fillcolor="#f1f5f9",color="#294c68",penwidth=1.4,fontname="DejaVu Sans",fontsize=13,margin="0.18,0.13"];
+  edge [fontname="DejaVu Sans",fontsize=10,color="#496278",arrowsize=0.65,dir=none];
+  nat [label="NAT1\nSalida exterior del laboratorio"];
+  isp [label="ISP · RouterOS\n198.51.100.97/30 hacia FGT\nOrigen de la prueba HTTPS por WAN"];
+  fgt [label="FGT-USER · FortiOS 7.4.12\nWAN port1: 198.51.100.98/30\nGestion: 192.168.178.2/24\nObjetivo auditado y endurecido",fillcolor="#deedf8",penwidth=2];
+  sw [label="SW-LAB\nConmutacion de LAN / gestion"];
+  dmz [label="SW2-DMZ\nRed 10.24.96.128/28"];
+  mgmt [label="Windows administrador\n192.168.178.1/24 · VMnet1\nMGMTCloud · PowerShell"];
+  router [label="USER-ROUTER · RouterOS\nether1: 10.10.10.2/30\nether2: VLAN10 y VLAN20"];
+  servers [label="Servidores de la DMZ\nWEB-CAJA / WEB-INVENTARIO / DB\nGateway: 10.24.96.129"];
+  clients [label="Clientes de VLAN10 / VLAN20\n10.24.96.0/25 · 10.24.97.0/25\nGateways .1 en USER-ROUTER"];
+  nat -> isp;
+  isp -> fgt [label="WAN 198.51.100.96/30"];
+  fgt -> sw [label="port2: 10.10.10.1/30\nIP secundaria: 192.168.178.2/24"];
+  fgt -> dmz [label="port3: 10.24.96.129/28"];
+  sw -> mgmt [label="MGMTCloud"];
+  sw -> router [label="Transito por ether1\ny trunk por ether2"];
+  sw -> clients [label="Puertos de usuarios"];
+  router -> clients [style=dashed,dir=forward,label="Enrutamiento y DHCP\n(relacion logica)",constraint=false];
+  dmz -> servers;
+  {rank=same;sw;dmz;}
+  {rank=same;mgmt;router;servers;}
+}

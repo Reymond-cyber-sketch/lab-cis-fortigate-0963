@@ -1,0 +1,20 @@
+digraph Flujo {
+  graph [rankdir=TB,bgcolor="white",pad="0.35",nodesep="0.45",ranksep="0.5",fontname="DejaVu Sans",label="Auditoria de solo lectura y aplicacion con comprobacion posterior",labelloc=t,fontsize=19];
+  node [shape=box,style="rounded,filled",fillcolor="#f1f5f9",color="#294c68",fontname="DejaVu Sans",fontsize=12,margin="0.15,0.12"];
+  edge [fontname="DejaVu Sans",fontsize=10,color="#496278"];
+  inv [label="Inventario y clave SSH fijada\nCredencial solicitada de forma oculta"];
+  read [label="Conexion SSH autenticada\nLectura de version, global e interfaces"];
+  mode [shape=diamond,label="Modo elegido"];
+  aud [label="Auditar\nSin comandos de configuracion"];
+  app [label="Aplicar\nLectura inicial + plan + reversion"];
+  set [label="Aplicar solo los ajustes necesarios\nWAN sin allowaccess; bloqueo >=900s"];
+  reread [label="Nueva conexion SSH interna\nRelectura y evaluacion real"];
+  report [label="Informes HTML / TXT / CSV / JSON\nCUMPLE, NO CUMPLE o error explicado"];
+  tests [label="Prueba funcional independiente\nHTTPS por WAN antes/despues\nAcceso interno de gestion"];
+  inv -> read -> mode;
+  mode -> aud [label="Auditar"];
+  mode -> app [label="Aplicar"];
+  app -> set -> reread -> report;
+  aud -> report;
+  report -> tests;
+}

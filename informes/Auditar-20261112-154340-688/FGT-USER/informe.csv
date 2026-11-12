@@ -1,0 +1,4 @@
+﻿"Fase","CIS","Comprobacion","Resultado","Observado","Esperado","Motivo"
+"Inicial","1.3","Servicios administrativos en WAN: port1","NO CUMPLE","ping https","allowaccess vacio","Reducir la superficie de acceso administrativo desde el exterior."
+"Inicial","2.2.2","Intentos fallidos y duracion del bloqueo","NO CUMPLE","Intentos=3; bloqueo=60 segundos","1-3 intentos; bloqueo >=900 segundos","Limitar los intentos consecutivos de acceso no autorizado."
+"Inicial","2.4.4","Caducidad de sesion administrativa inactiva","CUMPLE","5 minutos","1-15 minutos; objetivo elegido para aplicar: 5","Reducir el tiempo de exposicion de sesiones desatendidas."

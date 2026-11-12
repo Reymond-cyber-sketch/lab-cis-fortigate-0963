@@ -1,0 +1,17 @@
+﻿Equipo: FGT-USER
+Fecha: 2026-11-12T15:46:25.7242098-04:00
+Modo: Aplicar
+Estado: APLICACION Y RELECTURA COMPLETADAS
+Error: 
+
+Fase      CIS   Resultado Observado                                
+----      ---   --------- ---------                                
+Inicial   1.3   NO CUMPLE ping https                               
+Inicial   2.2.2 NO CUMPLE Intentos=3; bloqueo=60 segundos          
+Inicial   2.4.4 CUMPLE    5 minutos                                
+Posterior 1.3   CUMPLE    Sin servicios administrativos habilitados
+Posterior 2.2.2 CUMPLE    Intentos=3; bloqueo=900 segundos         
+Posterior 2.4.4 CUMPLE    5 minutos                                
+
+
+

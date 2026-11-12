@@ -1,0 +1,9 @@
+Autor: Ken Luis Mateo Lopez
+Matricula: 2024-0963
+Proyecto: Auditoria CIS y hardening automatizado de FortiGate 7.4
+
+Repositorio GitHub: PENDIENTE - PEGAR AQUI LA URL REAL DEL REPOSITORIO
+Video YouTube: PENDIENTE - PEGAR AQUI LA URL REAL DEL VIDEO
+
+El enlace del video debe figurar tambien al principio del README.
+Video maximo 10 minutos; mostrar fecha/hora, cara y voz; demostracion del objetivo de seguridad.

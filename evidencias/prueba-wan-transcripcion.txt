@@ -1,0 +1,25 @@
+TRANSCRIPCION DE SALIDAS APORTADAS POR EL USUARIO
+No es una captura original ni una ejecucion realizada en el entorno del asistente.
+
+ORIGEN: consola del router ISP, conectado al lado WAN del FortiGate.
+COMANDO IDENTICO ANTES Y DESPUES:
+/tool fetch url="https://198.51.100.98/" check-certificate=no output=none duration=10s
+
+ANTES DEL HARDENING:
+status: finished
+code: 200
+downloaded: 2KiB
+duration: 1s
+
+DESPUES DEL HARDENING:
+status: connecting
+failure: timeout connecting
+
+CONTROL COMPLEMENTARIO:
+El informe de Aplicar registra ReconexionSSH=true hacia 192.168.178.2
+y lecturas posteriores de la configuracion: WAN sin allowaccess y bloqueo 900s.
+
+INTERPRETACION:
+El acceso HTTPS probado desde WAN dejo de estar disponible tras retirar
+allowaccess en port1; la conexion SSH interna de gestion pudo restablecerse.
+No se declara probado otro servicio, otra politica de datos ni toda la red.
