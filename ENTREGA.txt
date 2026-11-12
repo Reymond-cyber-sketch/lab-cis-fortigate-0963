@@ -1,4 +1,4 @@
-Autor: Ken Luis Mateo Lopez
+Autor: Reymond Daniel
 Matricula: 2024-0963
 Proyecto: Auditoria CIS y hardening automatizado de FortiGate 7.4
 
