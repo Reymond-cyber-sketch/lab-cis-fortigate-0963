@@ -1,4 +1,4 @@
-**Video demostrativo en YouTube: PENDIENTE DE PUBLICAR — colocar aquí el enlace real.**
+**Video demostrativo en YouTube: — https://www.youtube.com/watch?v=zoL0s5j-t2k.**
 
 # Auditoría CIS y hardening automatizado de FortiGate
 
