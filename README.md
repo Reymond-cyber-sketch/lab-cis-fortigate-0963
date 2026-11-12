@@ -132,4 +132,4 @@ Los resultados se limitan al firewall y los controles elegidos. No se afirma cob
 - [Guion de demostración](docs/guion-video.md): recorrido de aproximadamente 7–9 minutos.
 - [Publicación y entrega](docs/publicar-y-entregar.md): repositorio propio, video y TXT de enlaces.
 
-**Pendiente de entrega externa:** publicar este contenido en su repositorio propio, grabar/subir el video a YouTube, sustituir el enlace de la primera línea y completar [ENTREGA.txt](ENTREGA.txt) con ambas URL reales.
+
